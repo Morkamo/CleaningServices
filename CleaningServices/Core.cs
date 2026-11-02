@@ -39,6 +39,7 @@ namespace CleaningServices
         {
             api.PlayerEvents.SpawnedRagdoll += RagdollsHandler.OnRagdollSpawned;
             api.ServerEvents.LczDecontaminationStarted += ZonesHandler.OnLczDecontaminationStarted;
+            api.ServerEvents.MapGenerating += ZonesHandler.OnMapGenerating;
             api.WarheadEvents.Detonated += ZonesHandler.OnWarheadDetonated;
         }
         
@@ -46,6 +47,7 @@ namespace CleaningServices
         {
             api.PlayerEvents.SpawnedRagdoll -= RagdollsHandler.OnRagdollSpawned;
             api.ServerEvents.LczDecontaminationStarted -= ZonesHandler.OnLczDecontaminationStarted;
+            api.ServerEvents.MapGenerating -= ZonesHandler.OnMapGenerating;
             api.WarheadEvents.Detonated -= ZonesHandler.OnWarheadDetonated;
         }
     }
